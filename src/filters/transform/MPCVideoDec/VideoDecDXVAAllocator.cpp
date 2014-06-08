@@ -23,7 +23,7 @@
 #include "VideoDecDXVAAllocator.h"
 #include "MPCVideoDecFilter.h"
 #include <Mferror.h>
-#include <d3dx9.h>
+#include <d3d9.h>
 #include <evr.h>
 
 

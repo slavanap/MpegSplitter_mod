@@ -120,13 +120,13 @@ EXIT /B
 
 
 :SubMake
-IF %ERRORLEVEL% NEQ 0 EXIT /B
+rem IF %ERRORLEVEL% NEQ 0 EXIT /B
 IF DEFINED NUMBER_OF_PROCESSORS (SET JOBS=%NUMBER_OF_PROCESSORS%) ELSE (SET JOBS=4)
 IF /I "%BUILDTYPE%" == "Clean"  (SET JOBS=1)
 
-TITLE make -j%JOBS% %*
-ECHO make -j%JOBS% %*
-make.exe -j%JOBS% %*
+TITLE make %*
+ECHO make %*
+make.exe %*
 IF %ERRORLEVEL% NEQ 0 CALL :SubMsg "ERROR" "'make -j%JOBS% %*' - failed!"
 EXIT /B
 
@@ -137,10 +137,10 @@ REM Set the GCC version
 FOR /F "tokens=1,2 delims= " %%G IN ('gcc -dumpversion') DO (SET "gccver=%%G")
 
 REM Copy the needed libraries
-COPY /Y /V "%MPCHC_MINGW32%\lib\gcc\i686-w64-mingw32\%gccver%\libgcc.a"   "%ROOT_DIR%\lib\" >NUL
-COPY /Y /V "%MPCHC_MINGW32%\i686-w64-mingw32\lib\libmingwex.a"            "%ROOT_DIR%\lib\" >NUL
-COPY /Y /V "%MPCHC_MINGW64%\lib\gcc\x86_64-w64-mingw32\%gccver%\libgcc.a" "%ROOT_DIR%\lib64\" >NUL
-COPY /Y /V "%MPCHC_MINGW64%\x86_64-w64-mingw32\lib\libmingwex.a"          "%ROOT_DIR%\lib64\" >NUL
+COPY /Y /V "%MPCHC_MINGW32%\lib\gcc\mingw32\%gccver%\libgcc.a"            "%ROOT_DIR%\lib\"
+COPY /Y /V "%MPCHC_MINGW32%\lib\libmingwex.a"                             "%ROOT_DIR%\lib\"
+COPY /Y /V "%MPCHC_MINGW64%\lib\gcc\x86_64-w64-mingw32\%gccver%\libgcc.a" "%ROOT_DIR%\lib64\" 
+COPY /Y /V "%MPCHC_MINGW64%\x86_64-w64-mingw32\lib\libmingwex.a"          "%ROOT_DIR%\lib64\" 
 EXIT /B
 
 

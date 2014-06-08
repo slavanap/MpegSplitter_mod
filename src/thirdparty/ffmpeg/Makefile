@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-CC = gcc.exe
+CC = c:\MinGW\bin\gcc.exe
 
 ifeq ($(VS2012),yes)
     BIN_DIR  = ../../../bin12

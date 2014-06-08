@@ -1361,6 +1361,7 @@ Global
 		{20E0F8D6-213C-460B-B361-9C725CB375C7}.Debug|x64.ActiveCfg = Debug|x64
 		{20E0F8D6-213C-460B-B361-9C725CB375C7}.Debug|x64.Build.0 = Debug|x64
 		{20E0F8D6-213C-460B-B361-9C725CB375C7}.Release Filter|Win32.ActiveCfg = Release|Win32
+		{20E0F8D6-213C-460B-B361-9C725CB375C7}.Release Filter|Win32.Build.0 = Release|Win32
 		{20E0F8D6-213C-460B-B361-9C725CB375C7}.Release Filter|x64.ActiveCfg = Release|x64
 		{20E0F8D6-213C-460B-B361-9C725CB375C7}.Release Lite|Win32.ActiveCfg = Release|Win32
 		{20E0F8D6-213C-460B-B361-9C725CB375C7}.Release Lite|x64.ActiveCfg = Release|x64

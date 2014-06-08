@@ -80,10 +80,14 @@ BOOL CMultiFiles::OpenFiles(CAtlList<CHdmvClipInfo::PlaylistItem>& files, UINT n
     return TRUE;
 }
 
+FILE *log = fopen("c:\\Users\\Vyacheslav\\Projects\\Utils\\ssifSource2\\seek.log", "w");
+
 ULONGLONG CMultiFiles::Seek(LONGLONG lOff, UINT nFrom)
 {
     LARGE_INTEGER llNewPos;
     LARGE_INTEGER llOff;
+
+	fprintf(log, "lOff %8ld, nFrom %8u\n", lOff, nFrom);
 
     if (m_strFiles.GetCount() == 1) {
         llOff.QuadPart = lOff;

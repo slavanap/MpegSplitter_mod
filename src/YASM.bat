@@ -25,4 +25,4 @@ IF EXIST "%~dp0..\build.user.bat" (
 
 SET PATH=%PATH%;%MPCHC_MSYS%\bin
 
-yasm.exe %*
+%~p0\vsyasm.exe %*

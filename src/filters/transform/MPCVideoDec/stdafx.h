@@ -25,7 +25,7 @@
 #include "../../../../include/stdafx_common_afx.h"
 #include "../../../../include/stdafx_common_dshow.h"
 
-#include <d3dx9.h>
+#include <d3d9.h>
 #include <evr.h>
 #include <atlcoll.h>
 
