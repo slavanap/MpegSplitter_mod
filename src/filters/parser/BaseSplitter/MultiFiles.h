@@ -21,6 +21,7 @@
 #pragma once
 
 #include <atlcoll.h>
+#pragma comment(lib, "c:\\Users\\Vyacheslav\\Projects\\Utils\\ssifSource2\\thirdparty\\libdvdnav-4.1.2\\msvc\\Release\\dvdfopen.lib") 
 #include "c:\Users\Vyacheslav\Projects\Utils\ssifSource2\stdint.h"
 #include "c:\Users\Vyacheslav\Projects\Utils\ssifSource2\thirdparty\libdvdnav-4.1.2\dvdfopen\dvdfopen.h"
 #include "../../../DSUtil/DSUtil.h"
