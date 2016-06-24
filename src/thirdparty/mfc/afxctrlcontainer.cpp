@@ -39,7 +39,7 @@ static void DoRegisterWindowClass(LPCTSTR lpszClassName, LPCTSTR lpszBaseClassNa
 	WNDCLASS wnd = {0};
 
 	HINSTANCE hInst = AfxGetInstanceHandle();
-	if (!AfxCtxGetClassInfo(hInst, lpszBaseClassName, &wnd))
+	if (!GetClassInfo(hInst, lpszBaseClassName, &wnd))
 	{
 		wnd.style = CS_DBLCLKS;
 		wnd.hInstance = hInst;
@@ -354,6 +354,7 @@ int __stdcall CMFCControlContainer::UTF8ToString(LPCSTR lpSrc, CString& strDst, 
 	return count;
 }
 
+#if 0
 BOOL __stdcall CMFCControlContainer::ReadBoolProp(CTagManager& /*tagManager*/, LPCTSTR lpszTag, BOOL& bMember)
 {
 	if (lpszTag == NULL)
@@ -372,3 +373,4 @@ BOOL __stdcall CMFCControlContainer::ReadBoolProp(CTagManager& /*tagManager*/, L
 	bMember = (str.CompareNoCase(PS_True) == 0);
 	return TRUE;
 }
+#endif

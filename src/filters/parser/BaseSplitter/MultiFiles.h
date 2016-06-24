@@ -21,9 +21,6 @@
 #pragma once
 
 #include <atlcoll.h>
-#pragma comment(lib, "c:\\Users\\Vyacheslav\\Projects\\Utils\\ssifSource2\\thirdparty\\libdvdnav-4.1.2\\msvc\\Release\\dvdfopen.lib") 
-#include "c:\Users\Vyacheslav\Projects\Utils\ssifSource2\stdint.h"
-#include "c:\Users\Vyacheslav\Projects\Utils\ssifSource2\thirdparty\libdvdnav-4.1.2\dvdfopen\dvdfopen.h"
 #include "../../../DSUtil/DSUtil.h"
 
 class CMultiFiles : public CObject
@@ -93,7 +90,7 @@ protected:
     CAtlArray<CString> m_strFiles;
     CAtlArray<ULONGLONG> m_FilesSize;
     CAtlArray<REFERENCE_TIME> m_rtPtsOffsets;
-    common_file_reader *m_hFile;
+    HANDLE m_hFile;
     int m_nCurPart;
     ULONGLONG m_llTotalLength;
 

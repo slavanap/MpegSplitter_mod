@@ -168,7 +168,7 @@ BOOL CMDIFrameWnd::CreateClient(LPCREATESTRUCT lpCreateStruct,
 	}
 
 	// Create MDICLIENT control with special IDC
-	if ((m_hWndMDIClient = ::AfxCtxCreateWindowEx(dwExStyle, _T("mdiclient"), NULL,
+	if ((m_hWndMDIClient = ::CreateWindowEx(dwExStyle, _T("mdiclient"), NULL,
 		dwStyle, 0, 0, 0, 0, m_hWnd, (HMENU)AFX_IDW_PANE_FIRST,
 		AfxGetInstanceHandle(), (LPVOID)&ccs)) == NULL)
 	{

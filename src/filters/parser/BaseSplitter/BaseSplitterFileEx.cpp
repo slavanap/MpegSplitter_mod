@@ -872,7 +872,8 @@ bool CBaseSplitterFileEx::Read(ac3hdr& h, int len, CMediaType* pmt, bool find_sy
         wfe.nAvgBytesPerSec = ((rate[h.frmsizecod >> 1] * 1000) >> h.sr_shift) / 8;
     } else {
         wfe.nSamplesPerSec = h.sample_rate;
-        wfe.nAvgBytesPerSec = h.frame_size * h.sample_rate / (h.num_blocks * 256);
+		int divisor = (h.num_blocks != 0) ? (h.num_blocks * 256) : 256;
+        wfe.nAvgBytesPerSec = h.frame_size * h.sample_rate / divisor;
     }
 
     wfe.nBlockAlign = (WORD)(1536 * wfe.nAvgBytesPerSec / wfe.nSamplesPerSec);
